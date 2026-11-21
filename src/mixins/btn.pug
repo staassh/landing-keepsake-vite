@@ -1,0 +1,13 @@
+//- Reusable button / link mixin supporting modifiers, &attributes and nested block content
+mixin btn(label, href = '#contact', variant = 'primary')
+  - const classes = ['btn', `btn--${variant}`];
+  if href
+    a(class=classes href=href)&attributes(attributes)
+      if block
+        block
+      span= label
+  else
+    button(class=classes type='button')&attributes(attributes)
+      if block
+        block
+      span= label

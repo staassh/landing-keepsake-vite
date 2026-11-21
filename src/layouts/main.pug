@@ -1,0 +1,19 @@
+include ../data/site
+include ../data/works
+include ../data/sections
+include ../mixins/btn
+include ../mixins/icon
+include ../mixins/picture
+include ../mixins/work-card
+include ../mixins/section-title
+
+doctype html
+html(lang=siteMeta.lang)
+  head
+    include ../includes/head
+  body#top
+    include ../components/header
+    main
+      block content
+    include ../components/footer
+    block scripts

@@ -1,0 +1,29 @@
+//- Responsive <picture> with AVIF, WebP and JPEG fallback in 400w and 800w
+mixin picture(name, alt, imgClass = '', sizes = '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw', lazy = true)
+  -
+    const avifSrcset = `assets/images/${name}-400.avif 400w, assets/images/${name}-800.avif 800w`;
+    const webpSrcset = `assets/images/${name}-400.webp 400w, assets/images/${name}-800.webp 800w`;
+    const fallbackSrc = `assets/images/${name}-800.jpg`;
+  picture
+    source(type='image/avif' srcset=avifSrcset sizes=sizes)
+    source(type='image/webp' srcset=webpSrcset sizes=sizes)
+    if lazy
+      img(
+        class=imgClass
+        src=fallbackSrc
+        alt=alt
+        width='800'
+        height='633'
+        loading='lazy'
+        decoding='async'
+      )&attributes(attributes)
+    else
+      img(
+        class=imgClass
+        src=fallbackSrc
+        alt=alt
+        width='800'
+        height='633'
+        fetchpriority='high'
+        decoding='async'
+      )&attributes(attributes)

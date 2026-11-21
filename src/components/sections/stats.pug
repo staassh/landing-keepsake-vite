@@ -1,0 +1,6 @@
+section.stats
+  .container.stat-grid
+    each stat in statsList
+      p.stat-grid__item
+        b.stat-grid__value= stat.value
+        span.stat-grid__label= stat.label

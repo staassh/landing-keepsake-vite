@@ -1,0 +1,15 @@
+extends ../layouts/main
+
+block append meta
+  meta(property='og:title' content=siteMeta.title)
+  meta(property='og:description' content=siteMeta.description)
+  meta(property='og:type' content=siteMeta.ogType)
+
+block content
+  include ../components/sections/hero
+  include ../components/sections/works
+  include ../components/sections/cta
+  include ../components/sections/services
+  include ../components/sections/stats
+  include ../components/sections/clients
+  include ../components/sections/journal

@@ -1,0 +1,13 @@
+//- Section heading mixin with optional subtitle
+mixin section-title(title, subtitle = '')
+  .section-title
+    if subtitle
+      div
+        h2.section-title__heading
+          | #{title}
+          i.section-title__accent
+        p.section-title__sub= subtitle
+    else
+      h2.section-title__heading
+        | #{title}
+        i.section-title__accent
