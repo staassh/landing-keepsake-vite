@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.section-title {
+  margin-bottom: 24px;
+
+  &__heading {
+    color: var(--color-text-dark);
+    font: 400 #{rem(18)} / 1.4 var(--head);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  &__accent {
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    margin: 0 0 5px 8px;
+    background: var(--color-accent);
+  }
+
+  &__sub {
+    margin-top: 6px;
+    font-size: rem(13);
+    color: var(--color-muted);
+  }
+}

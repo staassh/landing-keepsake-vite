@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.cta {
+  padding: 40px 0;
+  text-align: center;
+
+  @include mq(md) {
+    padding: 56px 0;
+  }
+
+  &__title {
+    color: var(--color-text-dark);
+    font: 300 #{rem(22)} / 1.4 var(--head);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+
+    @include mq(md) {
+      font-size: rem(24);
+    }
+
+    @include mq(lg) {
+      font-size: rem(28);
+    }
+  }
+}

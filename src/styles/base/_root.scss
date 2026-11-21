@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  --head: #{$font-head};
+  --body: #{$font-body};
+  --script: #{$font-script};
+  --section-space: 56px;
+  --container-max: #{$container-max};
+  --container-side: 40px;
+  --header-height: #{$header-height-sm};
+
+  @include mq(md) {
+    --section-space: 72px;
+    --container-side: 80px;
+    --header-height: #{$header-height-md};
+  }
+
+  @include mq(lg) {
+    --section-space: 90px;
+    --container-side: 180px;
+  }
+}
