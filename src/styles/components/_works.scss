@@ -162,12 +162,12 @@
     }
   }
 
-  &__radio:nth-of-type(1):checked ~ .filters &__label:nth-of-type(1),
-  &__radio:nth-of-type(2):checked ~ .filters &__label:nth-of-type(2),
-  &__radio:nth-of-type(3):checked ~ .filters &__label:nth-of-type(3),
-  &__radio:nth-of-type(4):checked ~ .filters &__label:nth-of-type(4),
-  &__radio:nth-of-type(5):checked ~ .filters &__label:nth-of-type(5),
-  &__radio:nth-of-type(6):checked ~ .filters &__label:nth-of-type(6) {
+  &__radio:nth-of-type(1):checked ~ .filters .filters__label:nth-of-type(1),
+  &__radio:nth-of-type(2):checked ~ .filters .filters__label:nth-of-type(2),
+  &__radio:nth-of-type(3):checked ~ .filters .filters__label:nth-of-type(3),
+  &__radio:nth-of-type(4):checked ~ .filters .filters__label:nth-of-type(4),
+  &__radio:nth-of-type(5):checked ~ .filters .filters__label:nth-of-type(5),
+  &__radio:nth-of-type(6):checked ~ .filters .filters__label:nth-of-type(6) {
     background: var(--color-accent);
     border-color: var(--color-accent);
     color: var(--color-white);
