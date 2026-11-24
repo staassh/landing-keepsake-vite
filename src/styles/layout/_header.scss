@@ -150,7 +150,7 @@
 .menu-shell {
   position: static;
 
-  &[open] > .nav {
+  &[open] + .nav {
     display: flex;
   }
 

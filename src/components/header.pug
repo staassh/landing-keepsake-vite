@@ -8,30 +8,26 @@ header.header
         i.burger__line
         i.burger__line
         i.burger__line
-      nav#main-nav.nav(aria-label="Main navigation")
-        each item in navItems
-          a.nav__link(
-            class={ "nav__link--active": item.active }
-            aria-current=item.active ? "page" : false
-            href=item.href
-          )
-            span= item.label
-            +icon("chevron", 14)
-        a.nav__heart(href="#works" aria-label="Favourites")
-          +icon("heart", 16)
-        .mobile-drawer-actions
-          +btn("Contact us", "#contact", "primary").mobile-drawer-actions__btn
-            +icon("mail", 14)
-          +btn("Favourites", "#works", "secondary").mobile-drawer-actions__btn.mobile-drawer-actions__btn--fav
-            +icon("heart", 14)(fill="#F95858")
-        .mobile-say-hello
-          small.mobile-say-hello__label SAY HELLO
-          a.mobile-say-hello__contact(href=`mailto:${siteMeta.email}`)= siteMeta.email
-          a.mobile-say-hello__contact(href=`tel:${siteMeta.phoneHref}`)= siteMeta.phone
-          .social-list
-            each soc in socialLinks
-              a.social-list__link(
-                class=`social-list__link--${soc.name}`
-                href=soc.href
-                aria-label=soc.label
-              )= soc.text
+    nav#main-nav.nav(aria-label="Main navigation")
+      each item in navItems
+        a.nav__link(
+          class={ "nav__link--active": item.active }
+          aria-current=item.active ? "page" : false
+          href=item.href
+        )
+          span= item.label
+          +icon("chevron", 14)
+      a.nav__heart(href="#works" aria-label="Favourites")
+        +icon("heart", 16)
+      .mobile-drawer-actions
+        +btn("Contact us", "#contact", "primary").mobile-drawer-actions__btn
+          +icon("mail", 14)
+        +btn("Favourites", "#works", "secondary").mobile-drawer-actions__btn.mobile-drawer-actions__btn--fav
+          +icon("heart", 14)(fill="#F95858")
+      .mobile-say-hello
+        small.mobile-say-hello__label SAY HELLO
+        a.mobile-say-hello__contact(href=`mailto:${siteMeta.email}`)= siteMeta.email
+        a.mobile-say-hello__contact(href=`tel:${siteMeta.phoneHref}`)= siteMeta.phone
+        .social-list
+          each soc in socialLinks
+            a.social-list__link(class=`social-list__link--${soc.name}` href=soc.href aria-label=soc.label)= soc.text
