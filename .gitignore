@@ -4,3 +4,6 @@ dist/
 *.local
 .vscode/*
 !.vscode/extensions.json
+
+# Vituum auto-generated import files
+src/styles/**/+.css
