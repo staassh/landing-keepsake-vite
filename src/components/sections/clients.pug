@@ -4,10 +4,10 @@ section.section.container
     each client in clientsList
       span.clients__logo(class=`clients__logo--${client.style}`)= client.name
   figure.quote
-    span.quote__mark “
+    span.quote__mark(aria-hidden="true") “
     blockquote.quote__text= testimonialData.quote
-    .quote__footer
-      figcaption.quote__author
+    figcaption.quote__footer
+      .quote__author
         b.quote__avatar= testimonialData.initials
         span.quote__meta
           strong.quote__name= testimonialData.author
