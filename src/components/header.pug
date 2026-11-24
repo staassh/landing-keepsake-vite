@@ -1,29 +1,29 @@
 header.header
   .container.header__inner
-    a.logo(href='#top')
+    a.logo(href="#top")
       b.logo__badge K
       span eepsake
     details.menu-shell
-      summary.burger(aria-controls='main-nav' aria-label='Toggle navigation')
+      summary.burger(aria-controls="main-nav" aria-label="Toggle navigation")
         i.burger__line
         i.burger__line
         i.burger__line
-      nav#main-nav.nav(aria-label='Main navigation')
+      nav#main-nav.nav(aria-label="Main navigation")
         each item in navItems
           a.nav__link(
-            class={ 'nav__link--active': item.active }
-            aria-current=item.active ? 'page' : false
+            class={ "nav__link--active": item.active }
+            aria-current=item.active ? "page" : false
             href=item.href
           )
             span= item.label
-            +icon('chevron', 14)
-        a.nav__heart(href='#works' aria-label='Favourites')
-          +icon('heart', 16)
+            +icon("chevron", 14)
+        a.nav__heart(href="#works" aria-label="Favourites")
+          +icon("heart", 16)
         .mobile-drawer-actions
-          +btn('Contact us', '#contact', 'primary')(class='mobile-drawer-actions__btn')
-            +icon('mail', 14)
-          +btn('Favourites', '#works', 'secondary')(class='mobile-drawer-actions__btn mobile-drawer-actions__btn--fav')
-            +icon('heart', 14)(fill='#F95858')
+          +btn("Contact us", "#contact", "primary").mobile-drawer-actions__btn
+            +icon("mail", 14)
+          +btn("Favourites", "#works", "secondary").mobile-drawer-actions__btn.mobile-drawer-actions__btn--fav
+            +icon("heart", 14)(fill="#F95858")
         .mobile-say-hello
           small.mobile-say-hello__label SAY HELLO
           a.mobile-say-hello__contact(href=`mailto:${siteMeta.email}`)= siteMeta.email

@@ -1,12 +1,7 @@
 section#works.section.works.container
-  +section-title('Our awesome works')
+  +section-title("Our awesome works")
   each cat in filterCategories
-    input.works__radio(
-      type='radio'
-      name='filter'
-      id=cat.id
-      checked=cat.checked
-    )
+    input.works__radio(type="radio" name="filter" id=cat.id checked=cat.checked)
   .filters
     each cat in filterCategories
       label.filters__label(for=cat.id)= cat.label
@@ -14,4 +9,4 @@ section#works.section.works.container
     each work, i in worksList
       li.works-grid__item(data-category=work.category)
         +work-card(work)
-  +btn('Load more works', '#works', 'outline')(class='works__more')
+  +btn("Load more works", "#works", "outline").works__more

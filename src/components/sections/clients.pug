@@ -1,8 +1,5 @@
 section.section.container
-  +section-title(
-    'Clients & kind words',
-    'Some of the teams that trusted us with their brands.'
-  )
+  +section-title("Clients & kind words", "Some of the teams that trusted us with their brands.")
   .clients
     each client in clientsList
       span.clients__logo(class=`clients__logo--${client.style}`)= client.name
@@ -15,8 +12,8 @@ section.section.container
         span.quote__meta
           strong.quote__name= testimonialData.author
           small.quote__role= testimonialData.role
-      .quote__dots(aria-hidden='true')
+      .quote__dots(aria-hidden="true")
         - let d = 0;
         while d < testimonialData.dotsCount
-          i.quote__dot(class={ 'quote__dot--active': d === testimonialData.activeDot })
+          i.quote__dot(class={ "quote__dot--active": d === testimonialData.activeDot })
           - d++;

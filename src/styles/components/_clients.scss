@@ -23,7 +23,9 @@
   }
 
   &__logo--italic {
-    font: 400 #{rem(20)} Georgia, serif;
+    font:
+      400 #{rem(20)} Georgia,
+      serif;
     font-style: italic;
   }
 
@@ -53,7 +55,9 @@
 
   &__mark {
     display: block;
-    font: 700 #{rem(44)} / 1 Georgia, serif;
+    font:
+      700 #{rem(44)} / 1 Georgia,
+      serif;
     color: var(--color-accent);
     margin-bottom: 8px;
   }

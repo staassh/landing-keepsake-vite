@@ -5,9 +5,7 @@
   "semi": true,
   "singleQuote": true,
   "trailingComma": "es5",
-  "plugins": [
-    "@prettier/plugin-pug"
-  ],
+  "plugins": ["@prettier/plugin-pug"],
   "pugSingleQuote": false,
   "pugAttributeSeparator": "none",
   "pugWrapAttributesThreshold": 3

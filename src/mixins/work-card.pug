@@ -1,7 +1,13 @@
 //- Portfolio work card mixin
 mixin work-card(work)
   a.work-card(href=work.href)
-    +picture(work.image, work.alt, 'work-card__img', '(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw', true)
+    +picture(
+      work.image,
+      work.alt,
+      "work-card__img",
+      "(min-width: 1280px) 357px, (min-width: 768px) 50vw, 100vw",
+      true,
+    )
     span.work-card__overlay
       b.work-card__plus +
       strong.work-card__title= work.title

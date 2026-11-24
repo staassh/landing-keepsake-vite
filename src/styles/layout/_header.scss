@@ -67,7 +67,9 @@
     width: 20px;
     height: 2px;
     background: var(--color-text-dark);
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
   }
 }
 

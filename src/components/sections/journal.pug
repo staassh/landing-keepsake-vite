@@ -1,14 +1,11 @@
 section#journal.section.container
-  +section-title(
-    'From the journal',
-    'Notes on process, case studies and things that inspire us.'
-  )
+  +section-title("From the journal", "Notes on process, case studies and things that inspire us.")
   .posts
     each post in journalPosts
       article.post-card
-        +picture(post.image, post.alt, 'post-card__img', '(min-width: 768px) 150px, 96px', true)
+        +picture(post.image, post.alt, "post-card__img", "(min-width: 768px) 150px, 96px", true)
         .post-card__body
-          small.post-card__meta #{post.date} &nbsp;/&nbsp; #{post.category}
+          small.post-card__meta #{ post.date } &nbsp;/&nbsp; #{ post.category }
           h3.post-card__title= post.title
           p.post-card__excerpt= post.excerpt
           a.post-card__link(href=post.href) Read more &rsaquo;
